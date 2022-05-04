@@ -1,6 +1,11 @@
 function calculateWords(chapterOfABook) {
   const wordCount = {};
-
+  chapterOfABook.split(" ").map((item) => {
+    if (item !== "") {
+      wordCount[item] ? (wordCount[item] += 1) : (wordCount[item] = 1);
+    }
+  });
+  console.log(wordCount);
   // Write your code in here
 
   return wordCount;
